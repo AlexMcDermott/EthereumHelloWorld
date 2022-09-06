@@ -7,7 +7,7 @@ function App() {
   const [currentMessage, setCurrentMessage] = useState("");
   const [updatedMessage, setUpdatedMessage] = useState("");
 
-  const contractAddress = "0x25BeB221491850E4C96A823e9C4D386d0a2e01Ec";
+  const contractAddress = "0x60D1b97baC636d663eD2e133A2E9604b9c1464eC";
   const contractABI = [
     {
       inputs: [
@@ -26,13 +26,7 @@ function App() {
         {
           indexed: false,
           internalType: "string",
-          name: "oldStr",
-          type: "string",
-        },
-        {
-          indexed: false,
-          internalType: "string",
-          name: "newStr",
+          name: "message",
           type: "string",
         },
       ],
@@ -56,7 +50,7 @@ function App() {
       inputs: [
         {
           internalType: "string",
-          name: "newStr",
+          name: "newMessage",
           type: "string",
         },
       ],
@@ -86,8 +80,8 @@ function App() {
     setUpdatedMessage("");
   };
 
-  contract.on("MessageUpdated", (oldStr, newStr) => {
-    setCurrentMessage(newStr);
+  contract.on("MessageUpdated", (newMessage) => {
+    setCurrentMessage(newMessage);
   });
 
   useEffect(() => {
