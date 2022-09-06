@@ -102,7 +102,7 @@ function App() {
   return (
     <div className="App">
       <h1>Hello World</h1>
-      <h2>{contractBalance}</h2>
+      <h2>Contract balance: {contractBalance}</h2>
       <h3>Current message: {currentMessage}</h3>
       <form onSubmit={handleMessageSubmit}>
         <input
