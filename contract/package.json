@@ -1,11 +1,8 @@
 {
-  "name": "ethereum-hello-world",
+  "name": "contract",
+  "private": true,
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {},
-  "author": "Alex McDermott",
-  "license": "ISC",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^1.0.2",
     "@nomiclabs/hardhat-ethers": "^2.1.1",
